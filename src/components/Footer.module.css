@@ -1,0 +1,33 @@
+/* Footer.module.css */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #001d3d;
+  color: #fff;
+}
+
+.footer div {
+  flex: 1;
+}
+
+.footer h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  margin-top: 5%;
+  width: 60%;
+  height: 20%;
+}

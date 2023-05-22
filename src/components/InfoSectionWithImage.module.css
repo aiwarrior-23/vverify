@@ -1,0 +1,40 @@
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .imagePart {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .textPart {
+    flex: 1;
+    padding: 10px;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .imageStyle {
+    width: 90%;
+    height: 50%;
+  }
+
+  .heading {
+    font-family: "gt-eesti-display-bold", sans-serif !important;
+    color: #333b40;
+    /* line-height: normal; */
+    font-size: 36px;
+    font-weight: 800;
+  }
+
+  .paragraph {
+    color: #546072;
+    font-weight: 400;
+    font-size: large;
+}
+  

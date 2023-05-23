@@ -18,6 +18,7 @@ body {
 }
 
 .recipe-card-image {
+  margin: 5%;
   overflow: hidden;
   height: 50%;
 }

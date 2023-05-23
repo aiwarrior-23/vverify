@@ -1,0 +1,22 @@
+.recipe-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .heading {
+    font-family: "gt-eesti-display-bold", sans-serif !important;
+    color: #333b40;
+    /* line-height: normal; */
+    font-size: 36px;
+    font-weight: 800;
+  }
+  
+  .paragraph {
+    color: #546072;
+    font-weight: 400;
+    font-size: large;
+  }

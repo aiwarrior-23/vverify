@@ -1,38 +1,38 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: flex-start;
-  padding: 50px 50px 50px 0px;
-  text-align: left;
-  color: white;
-  font-family: "Abril Fatface"; /* Replace with the actual font */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: left !important;
+  justify-content: flex-start !important;
+  padding: 50px 50px 50px 0px !important;
+  text-align: left !important;
+  color: white !important;
+  font-family: "Abril Fatface" !important; /* Replace with the actual font */
   background: url('https://www.betterup.com/hubfs/Blog%20Images/fake%20it%20till%20you%20make%20it/fake-it-til-make-it-person-on-blue-background.jpg') no-repeat center center; /* Replace with the actual background image */
-  background-size: cover;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover !important;
+  height: 500px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 
 .heading {
-  font-size: 70px;
-  margin-bottom: 20px;
-  margin-top: -10px;
-  max-width: 1000px;
-  margin-left: 1%
+  font-size: 70px !important;
+  margin-bottom: 20px !important;
+  margin-top: -10px !important;
+  max-width: 1000px !important;
+  margin-left: 1% !important
 }
 
 .text {
-  font-size: 24px;
-  max-width: 600px;
-  text-align: left;
-  margin-left: 1%;
-  margin-bottom: 2%
+  font-size: 24px !important;
+  max-width: 600px !important;
+  text-align: left !important;
+  margin-left: 1% !important;
+  margin-bottom: 2% !important
 }
 
 .outlined {
-  max-width: 400px;
+  max-width: 400px !important;
   color: aliceblue !important;
   border-color: aliceblue !important;
   margin-bottom: 1% !important

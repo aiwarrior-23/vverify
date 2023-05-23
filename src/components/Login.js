@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import styles from "./Login.module.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -47,8 +49,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Log in</button>
-          
+          <button type="submit"><Link to="/afterlogin">Log in</Link></button>
         </form>
       </div>
     </div>

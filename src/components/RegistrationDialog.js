@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Dialog, FormLabel, Typography, DialogActions, DialogContent, DialogTitle, Step, Stepper, StepLabel, TextField, RadioGroup, FormControlLabel, Radio, Select, MenuItem, InputLabel, FormControl } from '@material-ui/core';
-import { CloudUpload } from '@material-ui/icons';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Button, Dialog, FormLabel, DialogActions, DialogContent, DialogTitle, TextField, RadioGroup, FormControlLabel, Radio, Select, MenuItem, InputLabel, FormControl } from '@material-ui/core';
+import { Link } from "react-router-dom";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { makeStyles } from '@material-ui/core/styles';
 
-
-const steps = ['Enter Required Fields'];
 const useStyles = makeStyles({
     form: {
         display: 'block',
@@ -76,20 +73,7 @@ function getStepContent(classes) {
 
 const RegistrationDialog = () => {
     const [open, setOpen] = useState(true);
-    const [activeStep, setActiveStep] = useState(0);
     const classes = useStyles();
-
-    const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
-
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
 
     const handleClose = () => {
         setOpen(false);

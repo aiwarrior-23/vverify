@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Login from './components/Login';
 import Hero from './components/Hero';
@@ -20,8 +20,6 @@ import YotiReference from './components/YotiReference';
 Modal.setAppElement('#root');
 
 function App() {
-  const [loginIsOpen, setLoginIsOpen] = useState(false);
-
   return (
     <div className="App" style={{background:"linear-gradient(to right, #b0cefa, white)"}}>
       <Router>

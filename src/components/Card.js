@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./Card.module.css"
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from '@material-ui/core';
 
 function Recipe({title, img, lnk, desc, startCheck}) {

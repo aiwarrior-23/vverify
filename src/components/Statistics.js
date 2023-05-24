@@ -1,6 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { PieChart, Pie, Cell, Label } from 'recharts';
+import { PieChart, Pie, Cell } from 'recharts';
 
 const data = [
     { date: '1/01/2023', checks: 10 },

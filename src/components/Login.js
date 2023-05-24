@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./Login.module.css";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 
 

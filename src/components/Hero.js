@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Hero.module.css'; // Import the CSS Module
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 function Hero() {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Dialog, FormLabel, Typography, DialogActions, DialogContent, DialogTitle, Step, Stepper, StepLabel, TextField, RadioGroup, FormControlLabel, Radio, Select, MenuItem, InputLabel, FormControl } from '@material-ui/core';
+import { Button, Dialog, FormLabel, DialogActions, DialogContent, DialogTitle, Step, Stepper, StepLabel, TextField, RadioGroup, FormControlLabel, Radio, Select, MenuItem, InputLabel, FormControl } from '@material-ui/core';
 import { CloudUpload } from '@material-ui/icons';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
@@ -105,10 +105,6 @@ const FormDialogRTW = () => {
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    };
-
-    const handleClickOpen = () => {
-        setOpen(true);
     };
 
     const handleClose = () => {

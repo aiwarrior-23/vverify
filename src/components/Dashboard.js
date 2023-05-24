@@ -1,6 +1,5 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell, CartesianGrid } from 'recharts';
-import { XYPlot, VerticalBarSeries, HeatmapSeries, XAxis as XAxisRV, YAxis as YAxisRV } from 'react-vis';
 import "./Dashboard.module.css"
 // Assuming data is passed in the following format
 const data = [
@@ -42,14 +41,11 @@ const getBarChartData = (data) => {
     }));
   };
   
-const getHeatmapData = (data) => data;
-
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const Dashboard = () => {
   const barChartData = getBarChartData(data);
   const pieChartData = getPieChartData(data);
-  const heatmapData = getHeatmapData(data);
 
   return (
     <div className="dashboard">

@@ -1,0 +1,78 @@
+.tableContainer {
+	display: block;
+	width: 850px;
+	margin-left: 10em;
+	padding: 5px 10px;
+	background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .title {
+	font-family: 'Amarante', Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 1.7em;
+	margin-bottom: 10px;
+	text-align: center;
+	margin-left: 5em;
+  }
+  
+  .sortableTable {
+	margin: 0 auto;
+	font-size: 0.8em;
+	margin-bottom: 15px;
+	width: 120%;
+	border-collapse: collapse;
+	border: 1px solid #ccc; /* Add this line for the border */
+  }
+  
+  .sortableTable thead {
+	cursor: pointer;
+	background: #ffffff;
+	border-collapse: collapse;
+	border: 1px solid #ccc; /* Add this line for the border */
+  }
+  
+  .sortableTable thead tr th { 
+	font-weight: bold;
+	padding: 12px 30px;
+	padding-left: 42px;
+	border-collapse: collapse;
+	border: 1px solid #ccc; /* Add this line for the border */
+  }
+  
+  .sortableTable thead tr th span { 
+	padding-right: 20px;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+  }
+  
+  .sortableTable thead tr th.headerSortUp,
+  .sortableTable thead tr th.headerSortDown {
+	background: #ffffff;
+  }
+  
+  .sortableTable thead tr th.headerSortUp span {
+	background-image: url('https://i.imgur.com/SP99ZPJ.png');
+  }
+  
+  .sortableTable thead tr th.headerSortDown span {
+	background-image: url('https://i.imgur.com/RkA9MBo.png');
+  }
+  
+  .sortableTable tbody tr { 
+	color: #555;
+	border-collapse: collapse;
+	border: 1px solid #ccc; /* Add this line for the border */
+  }
+  
+  .sortableTable tbody tr td {
+	text-align: center;
+	padding: 15px 10px;
+	border-collapse: collapse;
+	border: 1px solid #ccc; /* Add this line for the border */
+  }
+  
+  .sortableTable tbody tr td.lalign {
+	text-align: left;
+  }
+  

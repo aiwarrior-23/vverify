@@ -12,43 +12,40 @@ import './App.css';
 import FormDialog from './components/FormDialog';
 import AfterLogin from './components/AfterLogin';
 import FormDialogRTW from './components/FormDialogRTW';
+import RegistrationDialog from './components/RegistrationDialog';
+import ClientTicker from './components/ClientTicker';
+import VisualizationScale from './components/Statistics';
+import YotiReference from './components/YotiReference';
 
 Modal.setAppElement('#root');
 
 function App() {
   const [loginIsOpen, setLoginIsOpen] = useState(false);
 
-  function openLoginModal() {
-    setLoginIsOpen(true);
-  }
-
-  function closeLoginModal() {
-    setLoginIsOpen(false);
-  }
-
   return (
-    <div className="App">
+    <div className="App" style={{background:"linear-gradient(to right, #b0cefa, white)"}}>
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/formdialog" element={<FormDialog />} />
           <Route path="/rtw" element={<FormDialogRTW />} />
           <Route path="/afterlogin" element={<AfterLogin />} />
+          <Route path="/register" element={<RegistrationDialog />} />
           <Route
             path="/"
             element={
               <>
                 <Header />
                 <Hero />
-                <div className="info-sections">
+                <div className="info-sections" style={{width:"100%"}}>
                   <InfoSectionWithImage
                     title="What is V-Verify"
-                    img="https://www.yoti.com/wp-content/uploads/Home_security_illustration.png"
+                    img="https://loginid.io/_ipx/_/authenticated-payments.png"
                     desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
                   />
                   <InfoSectionWithImageRight
                     title="How V-Verify Works"
-                    img="https://www.yoti.com/wp-content/uploads/Home_tech_for_good.png"
+                    img="https://uploads-ssl.webflow.com/622f09894fc230ad07de84a9/62693081500de0f10bb1e8ae_Group%201579-p-500.webp"
                     desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
                   />
                 </div>
@@ -71,6 +68,9 @@ function App() {
                     img="https://www.ucheck.co.uk/wp-content/uploads/identity-check-icon.svg"
                   />
                 </section>
+                <YotiReference />
+                <ClientTicker />
+                <VisualizationScale />
                 <Footer />
               </>
             }

@@ -8,7 +8,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-const steps = ['Upload Files', 'Enter Required Fields'];
+const steps = ['Upload Files', 'Enter Required Fields', 'Make Payment'];
 const useStyles = makeStyles({
     form: {
         display: 'block',
@@ -36,6 +36,21 @@ const useStyles = makeStyles({
             transform: 'translateY(-3px)' // slight lift on hover
         },
     },
+    payment: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '1rem',
+        padding: '1rem',
+        backgroundColor: '#f9f9f9',
+        borderRadius: '10px',
+    },
+    logo: {
+        width: '150px', // adjust these values as needed
+        height: 'auto', // keeps the aspect ratio intact
+    },
+
 });
 
 function getStepContent(step, classes) {
@@ -99,6 +114,23 @@ function getStepContent(step, classes) {
                     </FormControl>
                 </form>
             );
+        case 2:
+            return (
+                <div className={classes.payment}>
+                    <img src="https://assets.stickpng.com/images/5842a8e9a6515b1e0ad75b01.png" alt="Stripe Logo" className={classes.logo} />
+                    <Typography variant="h6">Payment Amount: $100</Typography>
+                    <Button
+                        variant="contained"
+                        className={classes.button}
+                        onClick={() => {
+                            // redirect to Stripe payment page
+                            window.location.href = "https://stripe.com/en-us/payments";
+                        }}
+                    >
+                        Proceed to Payment
+                    </Button>
+                </div>
+            );
         default:
             return 'Unknown step';
     }
@@ -144,19 +176,18 @@ const FormDialog = () => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">
-                        <Link to="/" style={{textDecoration: "None"}}>
+                        <Link to="/" style={{ textDecoration: "None" }}>
                             Cancel
                         </Link>
                     </Button>
                     {activeStep === steps.length - 1 ? (
-                            <Button onClick={handleClose} color="primary">
-                                <Link to="/" style={{textDecoration: "None"}}>
-                            Finish
-                        </Link>
-                            </Button>
+                        <Button onClick={handleClose} color="primary">
+                            <Link to="/" style={{ textDecoration: "None" }}>
+                                Finish
+                            </Link>
+                        </Button>
                     ) : (
-                        <Button
-                            onClick={handleNext} color="primary">
+                        <Button onClick={handleNext} color="primary">
                             Next
                         </Button>
                     )}
@@ -166,6 +197,7 @@ const FormDialog = () => {
                         </Button>
                     )}
                 </DialogActions>
+
             </Dialog>
         </div>
     );

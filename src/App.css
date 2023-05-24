@@ -21,11 +21,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f8fafd !important;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f8fafd;
 }
 
 @keyframes App-logo-spin {
@@ -43,8 +43,7 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  width: 100%;
-}
+  width: 100%;}
 
 .heading {
   font-family: "gt-eesti-display-bold", sans-serif !important;
@@ -52,6 +51,7 @@
   /* line-height: normal; */
   font-size: 36px;
   font-weight: 800;
+  margin-top: -10vh
 }
 
 .paragraph {

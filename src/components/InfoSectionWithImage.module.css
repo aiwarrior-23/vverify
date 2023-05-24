@@ -5,6 +5,7 @@
     padding: 50px 0;
     max-width: 1200px;
     margin: 0 auto;
+    width:100%
   }
   
   .imagePart {
@@ -20,9 +21,13 @@
   }
   
   .imageStyle {
-    width: 90%;
-    height: 50%;
+    width: 100vh;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
   }
+  .imageStyle:hover {
+    transform: scale(1.1);  /* Add this line */
+}
 
   .heading {
     font-family: "gt-eesti-display-bold", sans-serif !important;

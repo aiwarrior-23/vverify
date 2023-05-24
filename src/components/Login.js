@@ -3,24 +3,30 @@
 import React, { useState } from "react";
 import styles from "./Login.module.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [captchaValue, setCaptchaValue] = useState(null); // Add this
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email: ", email, "Password: ", password);
+    console.log("Email: ", email, "Password: ", password, "Captcha Value: ", captchaValue);
     // Implement authentication logic here
+  };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.logo}>
-          <img src="vVerify.png" alt="Your Logo" />
-          
+          <img src="x.png" alt="Your Logo" style={{width: "80%"}}/>
         </div>
         <label style={{textAlign:"center"}}>To get started, please login</label>
         <div className={styles.googleLogin}>
@@ -49,7 +55,12 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          <ReCAPTCHA
+          sitekey="Your reCAPTCHA Site Key"
+          onChange={handleCaptchaChange}
+        />
           <button type="submit"><Link to="/afterlogin">Log in</Link></button>
+          <button type="submit"><Link to="/register">Register</Link></button>
         </form>
       </div>
     </div>

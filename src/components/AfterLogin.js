@@ -5,9 +5,12 @@ import AfterLoginHeader from './AfterLoginHeader';
 import SortableTable from './ChecksTable';
 import styles from "./AfterLogin.module.css"
 import Dashboard from './Dashboard';
+import { useLocation } from 'react-router-dom'; // Import useLocation hook
 
 
 function AfterLogin() {
+      const location = useLocation();
+      const email = location.state.email;
       const data = [
             {
                   "Check ID": "abc-123-g67y",
@@ -39,7 +42,7 @@ function AfterLogin() {
                   </div>
                   <div className={styles['welcome-section']}>
                         <h1 className={styles['welcome-title']}>Welcome to V-Verify Hub</h1>
-                        <p className={styles['logged-in']}>Logged in as: <span className={styles['email']}>himanshuit3036@gmail.com</span></p>
+                        <p className={styles['logged-in']}>Logged in as: <span className={styles['email']}>{email}</span></p>
                   </div>
                   <hr className={styles.separator} />
                   <div>
@@ -78,7 +81,7 @@ function AfterLogin() {
                                     startCheck={true}
                               />
                         </section>
-                        <Dashboard />
+                        {email === "pradeep.sen.adp@gmail.com" && <Dashboard />}
                   </div>
             </div>
       );

@@ -4,18 +4,27 @@ import React, { useState } from "react";
 import styles from "./Login.module.css";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-
-
+import { useNavigate } from 'react-router-dom'; // Import useHistory
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [captchaValue, setCaptchaValue] = useState(null); // Add this
+  const navigate = useNavigate (); // Create an instance of useHistory
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email: ", email, "Password: ", password, "Captcha Value: ", captchaValue);
-    // Implement authentication logic here
+
+    // Check for email and password. If authentication successful, navigate to the after login page.
+    if (email && password) {
+      console.log('Email: ', email, 'Password: ', password, 'Captcha Value: ', captchaValue);
+
+      // Navigate to '/afterlogin' route,
+      // and pass the state (email)
+      navigate('/afterlogin', { state: { email } });
+    } else {
+      console.log('Invalid email or password');
+    }
   };
 
   const handleCaptchaChange = (value) => {
@@ -59,8 +68,8 @@ function Login() {
           sitekey="Your reCAPTCHA Site Key"
           onChange={handleCaptchaChange}
         />
-          <button type="submit"><Link to="/afterlogin">Log in</Link></button>
-          <button type="submit"><Link to="/register">Register</Link></button>
+          <button type="submit">Log in</button>
+          <button><Link to="/register">Register</Link></button>
         </form>
       </div>
     </div>

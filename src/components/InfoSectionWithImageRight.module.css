@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
-  max-width: 1200px;
   margin: 0 auto;
   margin-top: -10vh;
+  background-color: rgb(83, 83, 233);
+  width: 100%;
 }
 
 .imagePart {
@@ -21,7 +21,7 @@
 }
 
 .imageStyle {
-  width: 100vh;
+  max-width: 100%;
   height: auto;
   transition: transform 0.3s ease-in-out;
 }
@@ -32,14 +32,31 @@
 
 .heading {
   font-family: "gt-eesti-display-bold", sans-serif !important;
-  color: #333b40;
+  color: white;
   /* line-height: normal; */
   font-size: 36px;
   font-weight: 800;
 }
 
 .paragraph {
+  color: white;
+  font-weight: 400;
+  font-size: large;
+}
+
+.yotiIndividualHeading {
+  font-family: "gt-eesti-display-bold", sans-serif !important;
+  color: #333b40;
+  /* line-height: normal; */
+  font-size: 30px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.yotiIndividualParagraph {
   color: #546072;
   font-weight: 400;
   font-size: large;
+  text-align: left;
+  margin-bottom: 40%
 }

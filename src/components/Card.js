@@ -11,7 +11,7 @@ function Recipe({title, img, lnk, desc, startCheck}) {
             </div>
             <div className={styles["recipe-card-content"]}>
                 <h3 className={styles["recipe-title"]}>
-                    <Link to={lnk} style={{color:"#546072", textDecoration:"none"}}>{title}</Link>
+                    <Link to={lnk} style={{color:"#3a3a3a", textDecoration:"none", fontWeight:"1000"}}>{title}</Link>
                 </h3>
                 <p style={{color:"#546072"}}>{desc}</p>
                 {startCheck && 

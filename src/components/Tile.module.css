@@ -1,0 +1,78 @@
+.infoSection {
+    display: flex;
+    align-items: center;
+    /* max-width: 1200px; */
+    width:100%;
+    background-color: rgb(83, 83, 233);
+    height: 80vh;
+  }
+  
+  .imagePart {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .textPart {
+    flex: 1;
+    padding: 10px;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .imageStyle {
+    width: auto;
+    height: 80vh;
+    margin-top: 0.5vh;
+    margin-right: 30vh
+  }
+
+  .heading {
+    font-family: "gt-eesti-display-bold", sans-serif !important;
+    color: white;
+    /* line-height: normal; */
+    font-size: 70px;
+    font-weight: 50vh;
+    text-align: left;
+    margin-top: -30vh;
+    margin-left: -40vh;
+    max-width: 100vh !important;
+  }
+
+  .paragraph {
+    color: white;
+    font-weight: 400;
+    font-size: large;
+    text-align: left;
+    margin-left: -39vh;
+    min-width: 180vh;
+    margin-top: -5vh;
+}
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: -35vh;
+  margin-left: 75vh;
+  margin-bottom: 30vh
+  /* Add other styles as needed */
+}
+
+.buttonStyle {
+  justify-content: flex-start;
+  margin-bottom: 3vh;
+  width: 40vh;
+  color: white !important;
+  border: 1px solid white !important;
+  margin-top: 1vh !important;
+}
+
+
+/* ... Rest of your styles ... */
+
+  

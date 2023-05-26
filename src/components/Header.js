@@ -13,8 +13,8 @@ function Header() {
         {/* Insert nav links here */}
         <Link to="/vVerify-app" className={styles.paragraph}>How V-Verify Works</Link>
         <Link to="/vVerify-business" className={styles.paragraph}>V-Verify for Business</Link>
-        <Link to="/security-privacy" className={styles.paragraph}>Contact Us</Link>
-        <Link to="/tech-good" className={styles.paragraph}>Help</Link>
+        <Link to="/contactus" className={styles.paragraph}>Contact Us</Link>
+        <Link to="/aboutus" className={styles.paragraph}>About Us</Link>
         <Link to="/login" className={styles.paragraph}>Login</Link>
       </nav>
     </header>

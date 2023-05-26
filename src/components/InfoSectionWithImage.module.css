@@ -42,4 +42,20 @@
     font-weight: 400;
     font-size: large;
 }
+
+.yotiIndividualHeading {
+  font-family: "gt-eesti-display-bold", sans-serif !important;
+  color: #333b40;
+  /* line-height: normal; */
+  font-size: 30px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.yotiIndividualParagraph {
+  color: #546072;
+  font-weight: 400;
+  font-size: large;
+  text-align: left;
+}
   

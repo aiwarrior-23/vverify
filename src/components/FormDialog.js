@@ -117,7 +117,7 @@ function getStepContent(step, classes) {
         case 2:
             return (
                 <div className={classes.payment}>
-                    <img src="https://assets.stickpng.com/images/5842a8e9a6515b1e0ad75b01.png" alt="Stripe Logo" className={classes.logo} />
+                    <img src="stripe.png" alt="Stripe Logo" className={classes.logo} />
                     <Typography variant="h6">Payment Amount: $100</Typography>
                     <Button
                         variant="contained"

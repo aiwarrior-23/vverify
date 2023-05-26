@@ -51,22 +51,6 @@ function getStepContent(classes) {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker label="Date of Birth" margin="normal" fullWidth />
             </LocalizationProvider>
-            <TextField label="Passport Number" variant="outlined" fullWidth margin="normal" />
-            <TextField label="Driving License Number" variant="outlined" fullWidth margin="normal" />
-            <TextField label="Job Role" variant="outlined" fullWidth margin="normal" />
-            <TextField label="Employer Name" variant="outlined" fullWidth margin="normal" />
-            <TextField label="Employer Address" variant="outlined" fullWidth margin="normal" />
-            <TextField label="Eligibility for DBS Check" variant="outlined" fullWidth margin="normal" />
-            <TextField label="Regulated Activity" variant="outlined" fullWidth margin="normal" />
-            <TextField label="Workforce Type" variant="outlined" fullWidth margin="normal" />
-            <FormControl variant="outlined" fullWidth margin="normal">
-                <InputLabel id="barred-list-label">Barred List</InputLabel>
-                <Select labelId="barred-list-label" id="barred-list-select">
-                    <MenuItem value={10}>Child</MenuItem>
-                    <MenuItem value={20}>Adult</MenuItem>
-                    <MenuItem value={30}>Both</MenuItem>
-                </Select>
-            </FormControl>
         </form>
     );
 }
@@ -85,8 +69,8 @@ const RegistrationDialog = () => {
         Open form dialog
       </Button> */}
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Enhanced DBS Check</DialogTitle>
-                <DialogContent>
+                <DialogTitle id="form-dialog-title"><h2>Signup Page</h2></DialogTitle>
+                <DialogContent style={{marginTop:"-10%"}}>
                     {getStepContent(classes)}
                 </DialogContent>
                 <DialogActions>
@@ -97,7 +81,7 @@ const RegistrationDialog = () => {
                     </Button>
                     <Button onClick={handleClose} color="primary">
                         <Link to="/" style={{ textDecoration: "None" }}>
-                            Finish
+                            Submit
                         </Link>
                     </Button>
                 </DialogActions>

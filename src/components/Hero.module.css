@@ -3,11 +3,11 @@
   flex-direction: column !important;
   align-items: left !important;
   justify-content: flex-start !important;
-  padding: 50px 50px 50px 0px !important;
+  /* padding: 50px 50px 50px 0px !important; */
   text-align: left !important;
   color: white !important;
   font-family: "Abril Fatface" !important; /* Replace with the actual font */
-  background: url('https://www.betterup.com/hubfs/Blog%20Images/fake%20it%20till%20you%20make%20it/fake-it-til-make-it-person-on-blue-background.jpg') no-repeat center center; /* Replace with the actual background image */
+  background: url('https://cdn.discordapp.com/attachments/1061039263296262285/1111630917463707699/31428213-9ece-4b89-aced-fe2f51042e79.jpg') no-repeat center center; /* Replace with the actual background image */
   background-size: cover !important;
   height: 500px !important;
   background-repeat: no-repeat !important;
@@ -18,9 +18,10 @@
 .heading {
   font-size: 70px !important;
   margin-bottom: 20px !important;
-  margin-top: -10px !important;
-  max-width: 1000px !important;
-  margin-left: 1% !important
+  margin-top: 32% !important;
+  /* max-width: 1000px !important; */
+  /* margin-left: 30% !important; */
+  text-align: left;
 }
 
 .text {

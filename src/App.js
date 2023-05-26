@@ -16,6 +16,11 @@ import RegistrationDialog from './components/RegistrationDialog';
 import ClientTicker from './components/ClientTicker';
 import VisualizationScale from './components/Statistics';
 import YotiReference from './components/YotiReference';
+import YotiForIndividual from './components/YotiForIndividuals';
+import YotiForBusiness from './components/YotiForBusiness';
+import ContactUs from './components/ContactUs';
+import AboutUs from './components/AboutUs';
+import Tile from './components/Tile';
 
 Modal.setAppElement('#root');
 
@@ -29,24 +34,41 @@ function App() {
           <Route path="/rtw" element={<FormDialogRTW />} />
           <Route path="/afterlogin" element={<AfterLogin />} />
           <Route path="/register" element={<RegistrationDialog />} />
+          <Route path="/vverifyIndividual" element={<YotiForIndividual />} />
+          <Route path="/vverifyBusiness" element={<YotiForBusiness />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route
             path="/"
             element={
               <>
                 <Header />
-                <Hero />
                 <div className="info-sections" style={{width:"100%"}}>
+                <Tile
+                    title="Your Background Screening Expert"
+                    img="1.png"
+                    desc="We make it safer for people to prove who they are."
+                    clsH="heading"
+                    clsP ="paragraph"
+                  />
+                  <div style={{marginTop:"-15vh"}}>
                   <InfoSectionWithImage
                     title="What is V-Verify"
                     img="https://loginid.io/_ipx/_/authenticated-payments.png"
                     desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
+                    clsH="heading"
+                    clsP ="paragraph"
                   />
+                  </div>
+                  </div>
                   <InfoSectionWithImageRight
                     title="How V-Verify Works"
                     img="https://uploads-ssl.webflow.com/622f09894fc230ad07de84a9/62693081500de0f10bb1e8ae_Group%201579-p-500.webp"
                     desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
+                    clsH="heading"
+                    clsP ="paragraph"
                   />
-                </div>
+                  <div>
                 <h1 className="heading">Services Provided</h1>
                 <section className="recipe-container">
                   <Recipe
@@ -66,6 +88,7 @@ function App() {
                     img="https://www.ucheck.co.uk/wp-content/uploads/identity-check-icon.svg"
                   />
                 </section>
+                </div>
                 <YotiReference />
                 <ClientTicker />
                 <VisualizationScale />

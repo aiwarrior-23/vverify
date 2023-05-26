@@ -3,7 +3,7 @@
 	width: 850px;
 	margin-left: 10em;
 	padding: 5px 10px;
-	background-color: rgb(255, 255, 255) !important;
+	/* background-color: rgb(255, 255, 255) !important; */
   }
   
   .title {
@@ -27,7 +27,7 @@
   
   .sortableTable thead {
 	cursor: pointer;
-	background: #ffffff;
+	/* background: #ffffff; */
 	border-collapse: collapse;
 	border: 1px solid #ccc; /* Add this line for the border */
   }

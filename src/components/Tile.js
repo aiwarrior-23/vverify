@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from './InfoSectionWithImage.module.css';
+import styles from './Tile.module.css';
+import { Button } from '@mui/material';
 
-const InfoSectionWithImage = ({ title,title2, img, desc,desc2, clsH, clsP }) => {
+const Tile = ({ title,title2, img, desc,desc2, clsH, clsP }) => {
   const A = clsH
   const B = clsP
   return (
+    <div className={styles.outerContainer}>
     <div className={styles.infoSection}>
       <div className={styles.imagePart}>
         <img src={img} alt="description" className={styles.imageStyle} />
@@ -16,7 +18,12 @@ const InfoSectionWithImage = ({ title,title2, img, desc,desc2, clsH, clsP }) => 
         <p className={styles[B]}>{desc2}</p>
       </div>
     </div>
+    <div className={styles.buttonSection}>
+    <Button className={styles.buttonStyle} variant="outlined">V-Verify for Individuals</Button>
+    <Button className={styles.buttonStyle} variant="outlined">V-Verify for Business</Button>
+    </div>
+    </div>
   );
 };
 
-export default InfoSectionWithImage;
+export default Tile;

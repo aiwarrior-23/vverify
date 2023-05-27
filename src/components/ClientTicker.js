@@ -11,19 +11,21 @@ const useStyles = makeStyles({
     root: {
         display: 'flex',
         overflow: 'hidden',
-        height: '50px',
-        marginBottom: "5%"
+        height: '100%'
     },
     bannerImages: {
         width: "4em",
         height: "auto"
     },
+    clients: {
+        position: 'relative', // new style
+        overflow: 'hidden'
+    },
     marquee: {
         display: 'flex',
-        animation: '$marquee 50s linear infinite',
-        position: 'absolute',
+        animation: '$marquee 120s linear infinite',
         width: 'max-content',
-        left: '100%'
+        marginTop: "1%"
     },
     marqueeText: {
         padding: '0 2rem',
@@ -41,18 +43,21 @@ const useStyles = makeStyles({
 export default function ClientTicker() {
     const classes = useStyles();
     const clientNames = ["microsoft", "apple", "tesla", "infosys", "tcs"];
-    const clients = clientNames.map(clientName => <img src={`${clientName}.png`} alt={clientName} className={classes.bannerImages} />);  // add more clients as necessary
+    const clients = clientNames.map(clientName => <img src={`${clientName}.png`} alt={clientName} className={classes.bannerImages} />);
 
     return (
         <div className={classes.root}>
-            <div className={classes.marquee}>
-                {[...Array(3)].map((_, i) => // Repeat twice (or more for a longer list of clients)
-                    clients.map((client, j) => (
-                        <Typography variant="h6" noWrap className={classes.marqueeText} key={i * 100 + j}>
-                            {client}
-                        </Typography>
-                    ))
-                )}
+            <div className={classes.clients}>
+                <h1>Our Clients</h1>
+                <div className={classes.marquee}>
+                    {[...Array(10)].map((_, i) => 
+                        clients.map((client, j) => (
+                            <Typography variant="h6" wrap className={classes.marqueeText} key={i * 100 + j}>
+                                {client}
+                            </Typography>
+                        ))
+                    )}
+                </div>
             </div>
         </div>
     );

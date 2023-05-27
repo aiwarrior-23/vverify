@@ -48,6 +48,8 @@ const containerStyle = {
     flexWrap: 'wrap',
     width: '100%',
     height: '100%',
+    backgroundColor: "rgb(83, 83, 233)",
+    paddingTop: "4%"
 };
 
 const boxStyle = {
@@ -62,6 +64,7 @@ const boxStyle = {
 const imageStyle = {
     maxWidth: '100%',
     height: 'auto',
+    color: "white"
 };
 
 const renderCustomizedLabel = ({
@@ -82,7 +85,7 @@ const renderCustomizedLabel = ({
         <text
             x={x}
             y={y}
-            fill="#8884d8"
+            fill="white"
             textAnchor={x > cx ? 'start' : 'end'}
             dominantBaseline="central"
         >
@@ -95,8 +98,8 @@ function Statistics() {
     return (
         <div style={containerStyle}>
             <div style={boxStyle}>
-                <h3>Number of Checks per day</h3>
-                <p>At V-Verify, we prioritize safety and integrity. Our robust daily operations include conducting hundreds of background checks, a testament to our commitment to a secure and transparent work environment. This impressive figure isn't just about quantity, it’s about building trust and mitigating risk. Each check is a step towards unearthing potential discrepancies, ensuring our team's reliability, and upholding our reputation. We're proud to set the benchmark in comprehensive background check procedures, fostering a safer, more trustworthy business landscape.</p>
+                <h3 style={{color:"white"}}>Number of Checks per day</h3>
+                <p style={{color:"white"}}>At V-Verify, we prioritize safety and integrity. Our robust daily operations include conducting hundreds of background checks, a testament to our commitment to a secure and transparent work environment. This impressive figure isn't just about quantity, it’s about building trust and mitigating risk. Each check is a step towards unearthing potential discrepancies, ensuring our team's reliability, and upholding our reputation. We're proud to set the benchmark in comprehensive background check procedures, fostering a safer, more trustworthy business landscape.</p>
             </div>
             <div style={boxStyle}>
                 <LineChart
@@ -106,12 +109,12 @@ function Statistics() {
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                     style={imageStyle}
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="date" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Line type="monotone" dataKey="checks" stroke="#8884d8" activeDot={{ r: 8 }} />
+                    <CartesianGrid strokeDasharray="3 3" stroke='white' />
+                    <XAxis dataKey="date" stroke='white' />
+                    <YAxis stroke='white' />
+                    <Tooltip wrapperStyle={{ color: "#ffffff", backgroundColor: "#ffffff" }} />
+                    {/* <Legend wrapperStyle={{ color: "#ffffff", backgroundColor: "#ffffff" }} /> */}
+                    <Line type="monotone" dataKey="checks" stroke="white" activeDot={{ r: 8 }} />
                 </LineChart>
             </div>
             <div style={boxStyle}>
@@ -120,9 +123,9 @@ function Statistics() {
                         data={data2}
                         cx="50%"
                         cy="50%"
-                        labelLine={false}
+                        labelLine={true}
                         outerRadius={140}
-                        fill="#8884d8"
+                        fill="white"
                         dataKey="value"
                         label={renderCustomizedLabel}
                         style={imageStyle}
@@ -133,12 +136,12 @@ function Statistics() {
                             ))
                         }
                     </Pie>
-                    <Tooltip />
+                    <Tooltip wrapperStyle={{ color: "#000000", backgroundColor: "#ffffff" }} />
                 </PieChart>
             </div>
             <div style={boxStyle}>
-                <h3>Total Checks performed for each category</h3>
-                <p>At V-Verify, we are committed to maintaining a safe, compliant, and trustworthy workplace. Our diligence is reflected in the extensive number of background checks we conduct daily. We have proudly completed thousands of checks in two primary categories: DBS (Disclosure and Barring Service) and RTW (Right to Work) checks. These checks are crucial in our hiring process, ensuring that we only hire individuals suitable for their roles and who have the legal right to work in the country. By upholding these high standards, we create an environment of trust and safety, reinforcing our reputation as a responsible employer. We're proud to share these numbers as a testament to our unwavering dedication to transparency and ethical business practices.</p>
+                <h3 style={{color:"white"}}>Total Checks performed for each category</h3>
+                <p style={{color:"white"}}>At V-Verify, we are committed to maintaining a safe, compliant, and trustworthy workplace. Our diligence is reflected in the extensive number of background checks we conduct daily. We have proudly completed thousands of checks in two primary categories: DBS (Disclosure and Barring Service) and RTW (Right to Work) checks. These checks are crucial in our hiring process, ensuring that we only hire individuals suitable for their roles and who have the legal right to work in the country. By upholding these high standards, we create an environment of trust and safety, reinforcing our reputation as a responsible employer. We're proud to share these numbers as a testament to our unwavering dedication to transparency and ethical business practices.</p>
             </div>
         </div>
     );

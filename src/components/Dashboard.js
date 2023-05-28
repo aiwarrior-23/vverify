@@ -48,7 +48,7 @@ const Dashboard = () => {
   const pieChartData = getPieChartData(data);
 
   return (
-    <div style={{backgroundColor: "rgb(83, 83, 233)"}}><h1 style={{color: "white"}}>User Dashboard</h1>
+    <div style={{backgroundColor: "rgb(83, 83, 233)"}}><h1 style={{color: "white", paddingTop: "2%"}}>User Dashboard</h1>
     <div className={styles["dashboard"]}>
       <div className={styles["chart"]}>
         <h2>Bar Chart</h2>

@@ -1,0 +1,90 @@
+body {
+    color: #333b40;
+  }
+  
+  .table {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem 0;
+    max-width: 1100px;
+  }
+  
+  .table-cell {
+    flex-basis: calc(33.33% - 1px);
+    box-sizing: border-box;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style-type: none;
+    outline: 1px solid #ddd;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 1px;
+    margin-left: 1px;
+  }
+  
+  .table-cell:first-child {
+    outline: 1px solid #fff;
+    background: transparent;
+  }
+  
+  .table-cell:nth-child(3) {
+    outline: 1px solid #30305b;
+  }
+  
+  .table-cell:nth-child(-n+3) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .table-cell > h3 {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+  
+  .table-cell.cell-feature {
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .table-cell.plattform {
+    color: #333b40;
+  }
+  
+  .table-cell.plattform a.btn {
+    color: #333b40;
+  }
+  
+  .table-cell.plattform a.btn:hover {
+    background-color: #333b40;
+    border-color: #333b40;
+    color: white;
+  }
+  
+
+  .table-cell.enterprise a.btn {
+    color: #333b40;
+  }
+  
+  .table-cell.enterprise a.btn:hover {
+    background-color: #333b40;
+    border-color: #333b40;
+    color: #30305b;
+  }
+  
+  svg.enterprise-check path {
+    fill: #333b40 !important;
+  }
+  
+  a.btn {
+    border: 2px solid;
+    padding: 0.6rem 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 0.3rem;
+  }
+  

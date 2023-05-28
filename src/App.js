@@ -54,7 +54,7 @@ function App() {
                   <div style={{marginTop:"-15vh"}}>
                   <InfoSectionWithImage
                     title="What is V-Verify"
-                    img="firstImage.png"
+                    img="https://loginid.io/_ipx/_/authenticated-payments.png"
                     desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
                     clsH="heading"
                     clsP ="paragraph"
@@ -63,7 +63,7 @@ function App() {
                   </div>
                   <InfoSectionWithImageRight
                     title="How V-Verify Works"
-                    img="secondImage.png"
+                    img="https://uploads-ssl.webflow.com/622f09894fc230ad07de84a9/62693081500de0f10bb1e8ae_Group%201579-p-500.webp"
                     desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
                     clsH="heading"
                     clsP ="paragraph"

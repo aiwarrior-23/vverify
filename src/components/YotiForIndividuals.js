@@ -10,6 +10,7 @@ import InfoSectionWithImage from "./InfoSectionWithImage";
 import { Button } from "@material-ui/core";
 import Header from "./Header"
 import SortableTable from "./ChecksTable";
+import PricingTable from "./PricingTable";
 
 function YotiForIndividual() {
     const data = [
@@ -85,6 +86,7 @@ function YotiForIndividual() {
                 clsH="yotiIndividualHeading"
                 clsP="yotiIndividualParagraph"
             />
+            <PricingTable />
             </div>
         </div>
     );

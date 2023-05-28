@@ -1,81 +1,90 @@
-.tableContainer {
-	display: block;
-	width: 850px;
-	margin-left: 10em;
-	padding: 5px 10px;
-	/* background-color: rgb(255, 255, 255) !important; */
+.container {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
   }
   
-  .title {
-	font-family: 'Amarante', Tahoma, sans-serif;
-	font-weight: bold;
-	font-size: 2em;
-	line-height: 1.7em;
+  .h2 {
+	font-size: 26px;
+	margin: 20px 0;
+	text-align: center;
+	color: white;
+  }
+  
+  .h2 small {
+	font-size: 0.5em;
+  }
+  
+  .responsiveTable li {
+	border-radius: 3px;
+	padding: 25px 30px;
+	display: flex;
+	justify-content: space-between;
 	margin-bottom: 10px;
-	text-align: center;
-	margin-left: 5em;
-	color: white;
   }
   
-  .sortableTable {
-	margin: 0 auto;
-	font-size: 0.8em;
-	margin-bottom: 15px;
-	width: 120%;
-	border-collapse: collapse;
-	border: 1px solid black !important ; /* Add this line for the border */
-	color: white;
+  .responsiveTable .tableHeader {
+	background-color: whitesmoke;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	font-weight: 800;
   }
   
-  .sortableTable thead {
-	cursor: pointer;
-	/* background: #ffffff; */
-	border-collapse: collapse;
-	border: 1px solid black !important ; /* Add this line for the border */
+  .responsiveTable .tableRow {
+	background-color: #ffffff;
+	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
   }
   
-  .sortableTable thead tr th { 
-	font-weight: bold;
-	padding: 12px 30px;
-	padding-left: 42px;
-	border-collapse: collapse;
-	border: 1px solid white !important ; /* Add this line for the border */
-	color: white;
+  .responsiveTable .col-1 {
+	flex-basis: 10%;
   }
   
-  .sortableTable thead tr th span { 
-	padding-right: 20px;
-	background-repeat: no-repeat;
-	background-position: 100% 100%;
+  .responsiveTable .col-2 {
+	flex-basis: 40%;
   }
   
-  .sortableTable thead tr th.headerSortUp,
-  .sortableTable thead tr th.headerSortDown {
-	background: #ffffff;
+  .responsiveTable .col-3 {
+	flex-basis: 25%;
   }
   
-  .sortableTable thead tr th.headerSortUp span {
-	background-image: url('https://i.imgur.com/SP99ZPJ.png');
+  .responsiveTable .col-4 {
+	flex-basis: 25%;
   }
+
   
-  .sortableTable thead tr th.headerSortDown span {
-	background-image: url('https://i.imgur.com/RkA9MBo.png');
-  }
+  @media all and (max-width: 767px) {
+	.responsiveTable .tableHeader {
+	  display: none;
+	}
   
-  .sortableTable tbody tr { 
-	border-collapse: collapse;
-	border: 1px solid white !important ; /* Add this line for the border */
-	color: white;
-  }
+	.responsiveTable .tableRow {
+	  
+	}
   
-  .sortableTable tbody tr td {
-	text-align: center;
-	padding: 15px 10px;
-	border-collapse: collapse;
-	border: 1px solid white !important ; /* Add this line for the border */
-  }
+	.responsiveTable li {
+	  display: block;
+	}
   
-  .sortableTable tbody tr td.lalign {
-	text-align: left;
+	.responsiveTable .col {
+	  flex-basis: 100%;
+	}
+  
+	.responsiveTable .col {
+	  display: flex;
+	  padding: 10px 0;
+	}
+  
+	.responsiveTable .col:before {
+	  color: #020202;
+	  padding-right: 10px;
+	  content: attr(data-label);
+	  flex-basis: 50%;
+	  text-align: right;
+	}
   }
   

@@ -6,6 +6,7 @@ import SortableTable from './ChecksTable';
 import styles from "./AfterLogin.module.css"
 import Dashboard from './Dashboard';
 import { useLocation } from 'react-router-dom'; // Import useLocation hook
+import PricingTable from './PricingTable';
 
 
 function AfterLogin() {

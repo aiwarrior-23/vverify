@@ -1,9 +1,9 @@
 .infoSection {
   display: flex;
-  flex-direction: rows;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width:100%;
+  width: 100%;
   background-color: rgb(83, 83, 233);
   height: 80vh;
 }
@@ -51,44 +51,44 @@
 }
 
 .outerContainer {
-display: flex;
-flex-direction: column;
-border-right: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid white;
 }
 
 .buttonSection {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 10px;
-margin-top: 1rem;
-margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .buttonStyle {
-justify-content: flex-start;
-margin-bottom: 1rem;
-width: 100%;
-color: white !important;
-border: 1px solid white !important;
-margin-top: 1rem !important;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+  color: white !important;
+  border: 1px solid white !important;
+  margin-top: 1rem !important;
 }
 
 @media screen and (max-width: 768px) {
   .infoSection {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .heading {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .paragraph {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .buttonSection {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -99,4 +99,37 @@ margin-top: 1rem !important;
   justify-content: space-between;
   padding-right: 30vh;
 }
+
+.mennnn {
+  font-family: "gt-eesti-display-bold", sans-serif !important;
+  color: white;
+  font-size: 3rem;
+  text-align: left;
+  margin-top: 1rem;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing2 {
+  0%, 50% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+
+
 

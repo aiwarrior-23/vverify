@@ -1,38 +1,76 @@
 import React from 'react';
 import styles from './ChecksTable.module.css';
 
-const SortableTable = ({ data }) => {
-
-  const headers = ["Check ID", "Check Description", "Check Date", "Check Type", "Check Status"];
-
-  const rows = data.map((row, idx) => (
-    <tr key={idx}>
-      <td>{row["Check ID"]}</td>
-      <td>{row["Check Description"]}</td>
-      <td>{row["Check Date"]}</td>
-      <td>{row["Check Type"]}</td>
-      <td>{row["Check Status"]}</td>
-    </tr>
-  ));
-
-  const headerRow = headers.map((header, idx) => (
-    <th key={idx}><span>{header}</span></th>
-  ));
-
+const SortableTable = () => {
   return (
-    <div className={styles.tableContainer}>
-      <h1 className={styles.title}>Recent Checks Performed</h1>
-
-      <table className={styles.sortableTable}>
-        <thead>
-          <tr>
-            {headerRow}
-          </tr>
-        </thead>
-        <tbody>
-          {rows}
-        </tbody>
-      </table>
+    <div className={styles.container}>
+      <h2 className={styles.h2}>
+        Responsive Tables Using LI
+      </h2>
+      <ul className={styles.responsiveTable}>
+        <li className={styles.tableHeader}>
+          <div className={`${styles.col} ${styles['col-1']}`}>Check Id</div>
+          <div className={`${styles.col} ${styles['col-2']}`}>Check Type</div>
+          <div className={`${styles.col} ${styles['col-3']}`}>Check Description</div>
+          <div className={`${styles.col} ${styles['col-4']}`}>Check Status</div>
+        </li>
+        <li className={styles.tableRow}>
+          <div className={`${styles.col} ${styles['col-1']}`} data-label="Check Id">
+            42235
+          </div>
+          <div className={`${styles.col} ${styles['col-2']}`} data-label="Check Type">
+            Enhanced DBS
+          </div>
+          <div className={`${styles.col} ${styles['col-3']}`} data-label="Check Description">
+            Enhanced DBS Check
+          </div>
+          <div className={`${styles.col} ${styles['col-4']}`} data-label="Check Status">
+            Pending
+          </div>
+        </li>
+        <li className={styles.tableRow}>
+          <div className={`${styles.col} ${styles['col-1']}`} data-label="Check Id">
+            42442
+          </div>
+          <div className={`${styles.col} ${styles['col-2']}`} data-label="Check Type">
+            Basic DBS
+          </div>
+          <div className={`${styles.col} ${styles['col-3']}`} data-label="Check Description">
+            Basic DBS Check
+          </div>
+          <div className={`${styles.col} ${styles['col-4']}`} data-label="Check Status">
+            Completed
+          </div>
+        </li>
+        <li className={styles.tableRow}>
+          <div className={`${styles.col} ${styles['col-1']}`} data-label="Check Id">
+            42257
+          </div>
+          <div className={`${styles.col} ${styles['col-2']}`} data-label="Check Type">
+            Digital ID
+          </div>
+          <div className={`${styles.col} ${styles['col-3']}`} data-label="Check Description">
+            Digital ID Check
+          </div>
+          <div className={`${styles.col} ${styles['col-4']}`} data-label="Check Status">
+            Incomplete
+          </div>
+        </li>
+        <li className={styles.tableRow}>
+          <div className={`${styles.col} ${styles['col-1']}`} data-label="Check Id">
+            42311
+          </div>
+          <div className={`${styles.col} ${styles['col-2']}`} data-label="Check Type">
+            RTW
+          </div>
+          <div className={`${styles.col} ${styles['col-3']}`} data-label="Check Description">
+            RTW Check
+          </div>
+          <div className={`${styles.col} ${styles['col-4']}`} data-label="Check Status">
+            Rejected
+          </div>
+        </li>
+      </ul>
     </div>
   );
 };

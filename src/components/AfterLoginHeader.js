@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import CustomizedMenus from './MenuHome';
+import UploadIcon from '@mui/icons-material/Upload';
 
 function AfterLoginHeader() {
   return (

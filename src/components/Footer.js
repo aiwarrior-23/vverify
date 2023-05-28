@@ -11,10 +11,9 @@ const Footer = () => (
       <h2>SOLUTIONS</h2>
       <ul>
         <li>Digital ID</li>
-        <li>Identity Verification</li>
-        <li>Age Verification</li>
-        <li>eSignatures</li>
-        <li>Authentication</li>
+        <li>Right to Work</li>
+        <li>Basic DBS</li>
+        <li>Enhanced DBS</li>
       </ul>
     </div>
     <div>

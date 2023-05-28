@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell, CartesianGrid } from 'recharts';
-import "./Dashboard.module.css"
+import styles from "./Dashboard.module.css"
 // Assuming data is passed in the following format
 const data = [
   { name: 'aiwarrior-23', email: 'himanshuit3036@gmail', loginStatus: 'activated', checks: 'DBS Check', checkStatus: 'incomplete' },
@@ -48,12 +48,12 @@ const Dashboard = () => {
   const pieChartData = getPieChartData(data);
 
   return (
-    <div className="dashboard">
-      <h1>User Dashboard</h1>
-
-      <div className="chart">
+    <div style={{backgroundColor: "rgb(83, 83, 233)"}}><h1 style={{color: "white"}}>User Dashboard</h1>
+    <div className={styles["dashboard"]}>
+      <div className={styles["chart"]}>
         <h2>Bar Chart</h2>
-        <BarChart width={600} height={300} data={barChartData}>
+        <h3>Analysis of accounts active and not active</h3>
+        <BarChart width={500} height={300} data={barChartData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
@@ -63,13 +63,22 @@ const Dashboard = () => {
         </BarChart>
       </div>
 
-      <div className="chart">
+      <div className={styles["chart"]}>
         <h2>Pie Chart</h2>
+        <h3>Analysis of all the check statuses</h3>
         <PieChart width={400} height={400}>
-          <Pie data={pieChartData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#8884d8">
+          <Pie data={pieChartData} 
+          dataKey="value" 
+          nameKey="name" 
+          cx="50%" 
+          cy="50%" 
+          outerRadius={150} 
+          fill="#8884d8" 
+          className={styles["imageStyle"]}>
             {pieChartData.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)}
           </Pie>
           <Tooltip />
+          <Legend />
         </PieChart>
       </div>
 
@@ -81,6 +90,7 @@ const Dashboard = () => {
           <HeatmapSeries data={heatmapData} />
         </XYPlot>
       </div> */}
+    </div>
     </div>
   );
 };

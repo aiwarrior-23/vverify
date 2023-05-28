@@ -14,6 +14,7 @@
 	margin-bottom: 10px;
 	text-align: center;
 	margin-left: 5em;
+	color: white;
   }
   
   .sortableTable {
@@ -22,14 +23,15 @@
 	margin-bottom: 15px;
 	width: 120%;
 	border-collapse: collapse;
-	border: 1px solid #ccc; /* Add this line for the border */
+	border: 1px solid black !important ; /* Add this line for the border */
+	color: white;
   }
   
   .sortableTable thead {
 	cursor: pointer;
 	/* background: #ffffff; */
 	border-collapse: collapse;
-	border: 1px solid #ccc; /* Add this line for the border */
+	border: 1px solid black !important ; /* Add this line for the border */
   }
   
   .sortableTable thead tr th { 
@@ -37,7 +39,8 @@
 	padding: 12px 30px;
 	padding-left: 42px;
 	border-collapse: collapse;
-	border: 1px solid #ccc; /* Add this line for the border */
+	border: 1px solid white !important ; /* Add this line for the border */
+	color: white;
   }
   
   .sortableTable thead tr th span { 
@@ -60,16 +63,16 @@
   }
   
   .sortableTable tbody tr { 
-	color: #555;
 	border-collapse: collapse;
-	border: 1px solid #ccc; /* Add this line for the border */
+	border: 1px solid white !important ; /* Add this line for the border */
+	color: white;
   }
   
   .sortableTable tbody tr td {
 	text-align: center;
 	padding: 15px 10px;
 	border-collapse: collapse;
-	border: 1px solid #ccc; /* Add this line for the border */
+	border: 1px solid white !important ; /* Add this line for the border */
   }
   
   .sortableTable tbody tr td.lalign {

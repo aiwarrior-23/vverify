@@ -36,7 +36,7 @@ function AfterLogin() {
             // more data objects...
       ]
       return (
-            <div style={{ backgroundColor: "white" }}>
+            <div style={{ backgroundColor: "linear-gradient(to right, #b0cefa, white)" }}>
                   <div>
                         <AfterLoginHeader />
                   </div>
@@ -44,11 +44,9 @@ function AfterLogin() {
                         <h1 className={styles['welcome-title']}>Welcome to V-Verify Hub</h1>
                         <p className={styles['logged-in']}>Logged in as: <span className={styles['email']}>{email}</span></p>
                   </div>
-                  <hr className={styles.separator} />
-                  <div>
+                  <div style={{backgroundColor: "rgb(83, 83, 233)"}}>
                         <SortableTable data={data} />
                   </div>
-                  <hr className={styles.separator} />
                   <div>
                         <h1>Please select a Service</h1>
                         <p>Given below are the services that are provided by V-Verify. Please select a service and start the check</p>
@@ -81,7 +79,7 @@ function AfterLogin() {
                                     startCheck={true}
                               />
                         </section>
-                        {email === "pradeep.sen.adp@gmail.com" && <Dashboard />}
+                        {email === "pradeep.sen.sap@gmail.com" && <Dashboard />}
                   </div>
             </div>
       );

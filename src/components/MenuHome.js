@@ -9,8 +9,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
-
-
+import UploadIcon from '@mui/icons-material/Upload';
 
 export default function CustomizedMenus() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -22,7 +21,10 @@ export default function CustomizedMenus() {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ marginRight: '20px' }}>
+        <UploadIcon />
+      </div>
       <Button
         id="demo-customized-button"
         aria-controls={anchorEl ? 'demo-customized-menu' : undefined}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { PieChart, Pie, Cell } from 'recharts';
+import { BarChart, Bar } from 'recharts';
 
 const data = [
     { date: '1/01/2023', checks: 10 },
@@ -44,107 +44,87 @@ const data2 = [
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const containerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    width: '100%',
-    height: '100%',
-    backgroundColor: "rgb(83, 83, 233)",
-    paddingTop: "4%"
+  display: 'flex',
+  justifyContent: 'center',
+  flexWrap: 'wrap',
+  width: '100%',
+  height: '100%',
+  paddingTop: '1%',
 };
 
 const boxStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: 'rgb(83, 83, 233)',
+  marginBottom: '1%',
+};
+
+const boxStyle2 = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '50%',
-    height: '50%',
+    marginBottom: "5%",
+    fontFamily: "sans-serif",
+    width: "90%"
 };
 
 const imageStyle = {
-    maxWidth: '100%',
-    height: 'auto',
-    color: "white"
-};
-
-const renderCustomizedLabel = ({
-    cx,
-    cy,
-    midAngle,
-    innerRadius,
-    outerRadius,
-    percent,
-    index
-}) => {
-    const RADIAN = Math.PI / 180;
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-    return (
-        <text
-            x={x}
-            y={y}
-            fill="white"
-            textAnchor={x > cx ? 'start' : 'end'}
-            dominantBaseline="central"
-        >
-            {`${data2[index].name}: ${data2[index].value}`}
-        </text>
-    );
+  maxWidth: '100%',
+  marginTop: "5vh"
 };
 
 function Statistics() {
-    return (
-        <div style={containerStyle}>
-            <div style={boxStyle}>
-                <h3 style={{color:"white"}}>Number of Checks per day</h3>
-                <p style={{color:"white"}}>At V-Verify, we prioritize safety and integrity. Our robust daily operations include conducting hundreds of background checks, a testament to our commitment to a secure and transparent work environment. This impressive figure isn't just about quantity, it’s about building trust and mitigating risk. Each check is a step towards unearthing potential discrepancies, ensuring our team's reliability, and upholding our reputation. We're proud to set the benchmark in comprehensive background check procedures, fostering a safer, more trustworthy business landscape.</p>
-            </div>
-            <div style={boxStyle}>
-                <LineChart
-                    width={500}
-                    height={300}
-                    data={data}
-                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                    style={imageStyle}
-                >
-                    <CartesianGrid strokeDasharray="3 3" stroke='white' />
-                    <XAxis dataKey="date" stroke='white' />
-                    <YAxis stroke='white' />
-                    <Tooltip wrapperStyle={{ color: "#ffffff", backgroundColor: "#ffffff" }} />
-                    {/* <Legend wrapperStyle={{ color: "#ffffff", backgroundColor: "#ffffff" }} /> */}
-                    <Line type="monotone" dataKey="checks" stroke="white" activeDot={{ r: 8 }} />
-                </LineChart>
-            </div>
-            <div style={boxStyle}>
-                <PieChart width={500} height={300} style={imageStyle}>
-                    <Pie
-                        data={data2}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={true}
-                        outerRadius={140}
-                        fill="white"
-                        dataKey="value"
-                        label={renderCustomizedLabel}
-                        style={imageStyle}
-                    >
-                        {
-                            data2.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                            ))
-                        }
-                    </Pie>
-                    <Tooltip wrapperStyle={{ color: "#000000", backgroundColor: "#ffffff" }} />
-                </PieChart>
-            </div>
-            <div style={boxStyle}>
-                <h3 style={{color:"white"}}>Total Checks performed for each category</h3>
-                <p style={{color:"white"}}>At V-Verify, we are committed to maintaining a safe, compliant, and trustworthy workplace. Our diligence is reflected in the extensive number of background checks we conduct daily. We have proudly completed thousands of checks in two primary categories: DBS (Disclosure and Barring Service) and RTW (Right to Work) checks. These checks are crucial in our hiring process, ensuring that we only hire individuals suitable for their roles and who have the legal right to work in the country. By upholding these high standards, we create an environment of trust and safety, reinforcing our reputation as a responsible employer. We're proud to share these numbers as a testament to our unwavering dedication to transparency and ethical business practices.</p>
-            </div>
-        </div>
-    );
+  return (
+    <div style={containerStyle}>
+      <div style={boxStyle}>
+        <h3 style={{ color: 'white', fontSize: "2.25rem", fontWeight:"800" }}>Number of Checks per day</h3>
+        <p style={{ color: 'white', maxWidth: '90%' }}>
+          At V-Verify, we prioritize safety and integrity. Our robust daily operations include conducting hundreds of
+          background checks, a testament to our commitment to a secure and transparent work environment. This impressive
+          figure isn't just about quantity, it’s about building trust and mitigating risk. Each check is a step towards
+          unearthing potential discrepancies, ensuring our team's reliability, and upholding our reputation. We're proud
+          to set the benchmark in comprehensive background check procedures, fostering a safer, more trustworthy business
+          landscape.
+        </p>
+        <LineChart
+          width={700}
+          height={400}
+          data={data}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+          style={imageStyle}
+        >
+          <CartesianGrid strokeDasharray="3 3" stroke="white" />
+          <XAxis dataKey="date" stroke="white" />
+          <YAxis stroke="white" />
+          <Tooltip wrapperStyle={{ color: '#ffffff', backgroundColor: '#ffffff' }} />
+          <Line type="monotone" dataKey="checks" stroke="white" activeDot={{ r: 8 }} />
+        </LineChart>
+      </div>
+      <div style={boxStyle2}>
+        <h3 style={{ color: '#333b40', fontSize: "2.25rem", fontWeight:"800"}}>Our Checks Till Now</h3>
+        <p style={{ color: '#546072' }}>
+          At V-Verify, we are committed to maintaining a safe, compliant, and trustworthy workplace. Our diligence is
+          reflected in the extensive number of background checks we conduct daily. We have proudly completed thousands
+          of checks in two primary categories: DBS (Disclosure and Barring Service) and RTW (Right to Work) checks.
+          These checks are crucial in our hiring process, ensuring that we only hire individuals suitable for their roles
+          and who have the legal right to work in the country. By upholding these high standards, we create an environment
+          of trust and safety, reinforcing our reputation as a responsible employer. We're proud to share these numbers
+          as a testament to our unwavering dedication to transparency and ethical business practices.
+        </p>
+        <BarChart width={700} height={400} data={data} style={imageStyle}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#333b40" />
+          <XAxis dataKey="date" stroke="#333b40" />
+          <YAxis stroke="#333b40" />
+          <Tooltip wrapperStyle={{ color: '#333b40'}} />
+          <Legend wrapperStyle={{ color: '#333b40'}} />
+          <Bar dataKey="checks" fill="#333b40" />
+        </BarChart>
+      </div>
+    </div>
+  );
 }
 
 export default Statistics;

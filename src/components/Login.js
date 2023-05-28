@@ -10,7 +10,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [captchaValue, setCaptchaValue] = useState(null); // Add this
-  const navigate = useNavigate (); // Create an instance of useHistory
+  const navigate = useNavigate(); // Create an instance of useHistory
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,18 +35,18 @@ function Login() {
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.logo}>
-          <img src="x.png" alt="Your Logo" style={{width: "80%"}}/>
+          <img src="x.png" alt="Your Logo" style={{ width: "80%" }} />
         </div>
-        <label style={{textAlign:"center"}}>To get started, please login</label>
+        <label style={{ textAlign: "center" }}>To get started, please login</label>
         <div className={styles.googleLogin}>
-  <img
-    className={styles.googleIcon}
-    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-    alt="Google Icon"
-  />
-  Continue with Google
-</div>
-<div className={styles.separator}>OR</div>
+          <img
+            className={styles.googleIcon}
+            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            alt="Google Icon"
+          />
+          Continue with Google
+        </div>
+        <div className={styles.separator}>OR</div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input
@@ -65,11 +65,11 @@ function Login() {
             required
           />
           <ReCAPTCHA
-          sitekey="Your reCAPTCHA Site Key"
-          onChange={handleCaptchaChange}
-        />
+            sitekey="Your reCAPTCHA Site Key"
+            onChange={handleCaptchaChange}
+          />
           <button type="submit">Log in</button>
-          <button><Link to="/register">Register</Link></button>
+          <Link to="/register"><button>Register</button></Link>
         </form>
       </div>
     </div>

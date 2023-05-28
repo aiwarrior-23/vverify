@@ -6,7 +6,7 @@ body {
 }
 
 .recipe-card {
-    width: 31%;
+    width: 23%; /* Update the width to 23% */
     height: 40%;
     min-width: 240px;
     margin: 1%;
@@ -16,6 +16,7 @@ body {
     background-color: white !important;
     border-radius: 10% !important;
 }
+
 
 .recipe-card-image {
     margin-left: 25%;

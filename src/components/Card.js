@@ -15,7 +15,7 @@ function Recipe({title, img, lnk, desc, startCheck}) {
                 </h3>
                 <p style={{color:"#546072"}}>{desc}</p>
                 {startCheck && 
-                    <Button variant='outlined' style={{color:"#546072"}}>
+                    <Button variant='outlined' style={{color:"black", fontWeight:"bold", borderColor:"black"}}>
                         Start the Check
                     </Button>
                 }

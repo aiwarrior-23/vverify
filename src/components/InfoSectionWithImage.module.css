@@ -1,10 +1,10 @@
 .infoSection {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 50px 0;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
     width:100%
   }
   
@@ -21,7 +21,7 @@
   }
   
   .imageStyle {
-    width: 100vh;
+    width: 70vh;
     height: auto;
     transition: transform 0.3s ease-in-out;
   }

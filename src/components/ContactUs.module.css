@@ -28,13 +28,6 @@
     margin-top: 10px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .recipe-card {
     width: 23%; /* Update the width to 23% */
     height: 40%;

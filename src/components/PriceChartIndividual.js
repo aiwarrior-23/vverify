@@ -24,7 +24,7 @@ const FixedTableHeader = () => {
         </table>
       </div>
       <div className="tbl-content">
-        <table cellPadding="0" cellSpacing="0" border="0">
+        <table>
           <tbody>
             {data.map((row, index) => (
               <tr key={index}>

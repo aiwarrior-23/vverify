@@ -48,7 +48,7 @@ function App() {
                 <Tile
                     title="Your Background Screening Expert"
                     img="1.png"
-                    desc="We make it safer for people to prove who they are."
+                    desc="Experience trust and transparency with our bespoke verification services. From thorough background screenings to right-to-work and DBS checks, to digital ID validations, we equip you with reliable insights for informed decisions. Safeguard your environment with us, where safety and trust are paramount."
                     clsH="heading"
                     clsP ="paragraph"
                   />
@@ -64,7 +64,7 @@ function App() {
                   </div>
                   <InfoSectionWithImageRight
                     title="How V-Verify Works"
-                    img="https://uploads-ssl.webflow.com/622f09894fc230ad07de84a9/62693081500de0f10bb1e8ae_Group%201579-p-500.webp"
+                    img="10.png"
                     desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
                     clsH="heading"
                     clsP ="paragraph"
@@ -73,7 +73,7 @@ function App() {
                 <h1 className="heading" id='services'>Services Provided</h1>
                 <section className="recipe-container">
                   <Recipe
-                    img="enhancedDBS.gif"
+                    img="EDBS2.gif"
                     desc="Enhanced Disclosure and Barring Service"
                   />
                   <Recipe

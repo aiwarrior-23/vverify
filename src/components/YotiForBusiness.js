@@ -49,22 +49,6 @@ function YotiForBusiness() {
                 <p>Verify your identity details once to create your reusable ID.</p>
                 <Button variant="outlined" style={{ width: "20%" }}>Register Now</Button>
             </div>
-            <div style={{ marginTop: "5%" }}>
-                <h1 style={{ marginBottom: "-3%" }}>What you can do with your digital ID</h1>
-                <InfoSectionWithImage
-                    title="Prove your identity"
-                    title2="Prove your age"
-                    img="https://uploads-ssl.webflow.com/622f09894fc230ad07de84a9/62693081500de0f10bb1e8ae_Group%201579-p-500.webp"
-                    desc="Keep your personal details safely stored in the Yoti app, where only you can access them. 
-            When you need to prove your age, identity or other details about yourself with a business or another person, you can securely share just the details required."
-                    desc2="Prove your age online and at 12,000 convenience stores in England and Wales* without revealing your whole identity. "
-                    clsH="yotiIndividualHeading"
-                    clsP="yotiIndividualParagraph"
-                />
-            </div>
-            <div style={{ marginRight: "50%" }}>
-                <SortableTable data={data} />
-            </div>
             <div>
                 <InfoSectionWithImage
                     title="What is a DBS Check?"

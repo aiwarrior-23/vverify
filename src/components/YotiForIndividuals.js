@@ -89,7 +89,6 @@ function YotiForIndividual() {
                     clsH="yotiIndividualHeading"
                     clsP="yotiIndividualParagraph"
                 />
-                {/* <PricingTable /> */}
                 <FixedTableHeader />
             </div>
         </div>

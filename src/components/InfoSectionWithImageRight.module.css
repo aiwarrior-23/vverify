@@ -1,9 +1,7 @@
 .infoSection {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  margin-top: -10vh;
   background-color: rgb(83, 83, 233);
   width: 100%;
 }
@@ -15,15 +13,16 @@
 
 .textPart {
   flex: 1;
-  padding: 5px;
   font-weight: 400;
   font-style: normal;
 }
 
 .imageStyle {
   max-width: 100%;
+  width: 80vh;
   height: auto;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: -10%;
 }
 .imageStyle:hover {
   transform: scale(1.1);  /* Add this line */
@@ -42,21 +41,4 @@
   color: white;
   font-weight: 400;
   font-size: large;
-}
-
-.yotiIndividualHeading {
-  font-family: "gt-eesti-display-bold", sans-serif !important;
-  color: #333b40;
-  /* line-height: normal; */
-  font-size: 30px;
-  font-weight: 800;
-  text-align: left;
-}
-
-.yotiIndividualParagraph {
-  color: #546072;
-  font-weight: 400;
-  font-size: large;
-  text-align: left;
-  margin-bottom: 40%
 }

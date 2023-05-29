@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Tile.module.css';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Tile = ({ title, title2, img, desc, desc2 }) => {
   const texts = ["Background Screening ", "RTW Check ", "Identity Check ", "DBS Check "];
@@ -51,8 +52,8 @@ const Tile = ({ title, title2, img, desc, desc2 }) => {
           <p className={styles.paragraph}>{desc2}</p>
         </div>
         <div className={styles.buttonSection}>
-          <Button className={styles.buttonStyle} variant="outlined">V-Verify for Individuals</Button>
-          <Button className={styles.buttonStyle} variant="outlined">V-Verify for Business</Button>
+          <Link to="/vverifyIndividual"><Button className={styles.buttonStyle} variant="outlined">V-Verify for Individuals</Button></Link>
+          <Link to="/vverifyBusiness"><Button className={styles.buttonStyle} variant="outlined">V-Verify for Business</Button></Link>
         </div>
       </div>
     </div>

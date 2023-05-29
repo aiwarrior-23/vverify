@@ -19,7 +19,7 @@ const Tile = ({ title, title2, img, desc, desc2 }) => {
         setText((text) => text + texts[currentTextIndex][currentIndex]);
         setCurrentIndex((currentIndex) => currentIndex + 1);
       }
-    }, 200);
+    }, 1000);
 
     if (!isDeleting && currentIndex === texts[currentTextIndex].length) {
       setIsDeleting(true);

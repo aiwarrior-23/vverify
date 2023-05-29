@@ -24,13 +24,16 @@ function YotiForBusiness() {
     return (
         <div>
             <Header />
-            <InfoSectionWithImageRight
-                title="V-Verify is your secure digital ID"
-                img="https://www.yoti.com/wp-content/uploads/Agecheck_compr.webp"
-                desc="The safe way to prove your identity, online and in person."
-                clsH="yotiIndividualHeading"
-                clsP="yotiIndividualParagraph"
-            />
+            <marquee style={{color:"red", fontWeight:"bold"}}>**** This page is still under development ***</marquee>
+            <div className={styles.infoSection}>
+                <div className={styles.textPart}>
+                    <h2 className={styles["heading"]}>V-Verify is your secure digital ID</h2>
+                    <p className={styles["paragraph"]}>The safe way to prove your identity, online and in person.</p>
+                </div>
+                <div className={styles.imagePart}>
+                    <img src="https://www.yoti.com/wp-content/uploads/Agecheck_compr.webp" alt="description" className={styles.imageStyle} />
+                </div>
+            </div>
             <div style={{ marginTop: "-8%" }}>
                 <InfoSectionWithImage
                     title="Safely store your details, securely prove who you are"

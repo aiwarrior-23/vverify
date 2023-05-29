@@ -1,49 +1,80 @@
 .recipe-container {
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left !important;
   width: 100%;
 }
-  
-  .heading {
-    font-family: "gt-eesti-display-bold", sans-serif !important;
-    color: #333b40;
-    /* line-height: normal; */
-    font-size: 36px;
-    font-weight: 800;
-  }
-  
-  .paragraph {
-    color: #546072;
-    font-weight: 400;
-    font-size: large;
-  }
-  .welcome-section {
-    text-align: center;
-    /* margin-bottom: 20px; */
-    height: 100px !important;
 
-  }
-  
-  .welcome-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .logged-in {
-    color: blue;
-    font-size: 16px;
-  }
-  
-  .email {
-    font-weight: bold;
-  }
+.heading {
+  font-family: "gt-eesti-display-bold", sans-serif !important;
+  color: #333b40;
+  /* line-height: normal; */
+  font-size: 36px;
+  font-weight: 800;
+}
 
-  .separator {
-    margin: 2em auto;
-    border: none;
-    border-top: 1px solid #ccc;
-  }
-  
+.paragraph {
+  color: #546072;
+  font-weight: 400;
+  font-size: large;
+}
+
+.welcome-section {
+  text-align: center;
+  /* margin-bottom: 20px; */
+  height: 100px !important;
+
+}
+
+.welcome-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logged-in {
+  color: blue;
+  font-size: 16px;
+}
+
+.email {
+  font-weight: bold;
+}
+
+.separator {
+  margin: 2em auto;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+.recipe-card {
+  width: 20.5%;
+  height: auto;
+  min-width: 240px;
+  margin: 1rem;
+  border-radius: 10% !important;
+}
+
+
+.recipe-card-image {
+  margin-top: 5%;
+
+  border-radius: 10%;
+}
+
+.recipe-card-image img {
+  width: 30vh;
+  height: 30vh;
+}
+
+
+.recipe-title {
+  color: #3a3a3a !important;
+  font-weight: 400;
+  font-size: large;
+  font-weight: 500;
+}

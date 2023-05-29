@@ -5,7 +5,7 @@ const SortableTable = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.h2}>
-        Responsive Tables Using LI
+        Recent Checks Summary
       </h2>
       <ul className={styles.responsiveTable}>
         <li className={styles.tableHeader}>

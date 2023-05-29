@@ -22,6 +22,7 @@ export default function CustomizedMenus() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openDialog, setOpenDialog] = React.useState(false); // State for the dialog
   const [selectedOption, setSelectedOption] = React.useState(''); // State for selected option
+  const [selectedFile, setSelectedFile] = React.useState(null); // State for selected file
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -43,12 +44,48 @@ export default function CustomizedMenus() {
     setSelectedOption(option); // Set selected option
   };
 
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file); // Set selected file
+  };
+
+  const handleUpload = () => {
+    // Handle the file upload logic here
+    if (selectedFile) {
+      // Perform upload operation using the selected file
+      console.log('Uploading file:', selectedFile);
+      // Reset the selected file state
+      setSelectedFile(null);
+    }
+  };
+
+  const UploadButton = () => (
+    <>
+      <input
+        id="upload-button"
+        type="file"
+        accept=".csv"
+        style={{ display: 'none' }}
+        onChange={handleFileChange}
+      />
+      <label htmlFor="upload-button" className={styles.uploadButtonLabel}>
+        <Button
+          component="span"
+          startIcon={<UploadIcon />}
+          className={styles.uploadButton}
+        >
+          Bulk Profile
+        </Button>
+      </label>
+    </>
+  );
+
   return (
     <div className={styles.menuContainer}>
       <div className={styles.uploadIcon}>
         <Button onClick={handleCreateProfile}> Create Profile </Button>
       </div>
-      <div className={styles.buttonWrapper}> {/* Add a wrapper div around the button */}
+      <div className={styles.buttonWrapper}>
         <Button
           id="demo-customized-button"
           aria-controls={anchorEl ? 'demo-customized-menu' : undefined}
@@ -59,7 +96,7 @@ export default function CustomizedMenus() {
           onClick={handleClick}
           endIcon={<KeyboardArrowDownIcon />}
           startIcon={<Person2OutlinedIcon />}
-          className={styles.button} // Apply custom styles to the button
+          className={styles.button}
         >
           Himanshu Singh
         </Button>
@@ -85,7 +122,7 @@ export default function CustomizedMenus() {
           disableRipple
           className={styles.menuItem}
         >
-          <PersonIcon style={{marginRight: "4%"}} />
+          <PersonIcon className={styles.menuIcon} />
           Profile
         </MenuItem>
         <Divider />
@@ -94,7 +131,7 @@ export default function CustomizedMenus() {
           disableRipple
           className={styles.menuItem}
         >
-          <SettingsIcon style={{marginRight: "4%"}} />
+          <SettingsIcon className={styles.menuIcon} />
           Settings
         </MenuItem>
         <Divider />
@@ -103,7 +140,7 @@ export default function CustomizedMenus() {
           disableRipple
           className={styles.menuItem}
         >
-          <Logout style={{marginRight: "4%"}} />
+          <Logout className={styles.menuIcon} />
           Logout
         </MenuItem>
       </Menu>
@@ -118,16 +155,13 @@ export default function CustomizedMenus() {
           >
             Single Profile
           </Button>
-          <Button
-            onClick={() => handleOptionClick('Bulk')}
-            startIcon={<PeopleIcon />}
-            disabled={selectedOption === 'Bulk'}
-          >
-            Bulk Profile
-          </Button>
+          <UploadButton />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleDialogClose}>Cancel</Button>
+          <Button onClick={handleUpload} disabled={!selectedFile}>
+            Upload
+          </Button>
         </DialogActions>
       </Dialog>
     </div>

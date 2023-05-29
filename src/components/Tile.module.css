@@ -26,11 +26,25 @@
 
 .imageStyle {
   width: auto;
-  height: 79.5vh;
+  height: 74vh;
   object-fit: cover;
   margin-top: 0.5vh;
   margin-right: 16.5vh;
+  animation: scaleAnimation 4s ease-in-out infinite;
 }
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .heading {
   font-family: "gt-eesti-display-bold", sans-serif !important;
@@ -72,6 +86,7 @@
   color: white !important;
   border: 1px solid white !important;
   margin-top: 1rem !important;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

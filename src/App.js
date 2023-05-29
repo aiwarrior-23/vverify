@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import Login from './components/Login';
-import Hero from './components/Hero';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import InfoSectionWithImage from './components/InfoSectionWithImage';
@@ -21,12 +20,13 @@ import YotiForBusiness from './components/YotiForBusiness';
 import ContactUs from './components/ContactUs';
 import AboutUs from './components/AboutUs';
 import Tile from './components/Tile';
+import Dummy from './components/Dummy';
 
 Modal.setAppElement('#root');
 
 function App() {
   return (
-    <div className="App" style={{background:"linear-gradient(to right, #b0cefa, white)"}}>
+    <div className="App" style={{background:"linear-gradient(to right, #b0cefa, white)", maxWidth:"100%"}}>
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -38,12 +38,13 @@ function App() {
           <Route path="/vverifyBusiness" element={<YotiForBusiness />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/dummy" element={<Dummy />} />
           <Route
             path="/"
             element={
               <>
                 <Header />
-                <div className="info-sections" style={{width:"100%", justifyContent: "center"}}>
+                <div className="info-sections" style={{ width: "100%", justifyContent: "center", textAlign: "center" }}>
                 <Tile
                     title="Your Background Screening Expert"
                     img="1.png"
@@ -69,23 +70,23 @@ function App() {
                     clsP ="paragraph"
                   />
                   <div>
-                <h1 className="heading">Services Provided</h1>
+                <h1 className="heading" id='services'>Services Provided</h1>
                 <section className="recipe-container">
                   <Recipe
-                    title="Enhanced DBS"
-                    img="https://www.ucheck.co.uk/wp-content/uploads/list-icon-with-checkmark.svg"
+                    img="enhancedDBS.gif"
+                    desc="Enhanced Disclosure and Barring Service"
                   />
                   <Recipe
-                    title="Basic DBS"
-                    img="https://www.ucheck.co.uk/wp-content/uploads/paper-check-mark.svg"
+                    img="DBS.gif"
+                    desc="Disclosure and Barring Service"
                   />
                   <Recipe
-                    title="RTW"
-                    img="https://www.ucheck.co.uk/wp-content/uploads/scale-icon.svg"
+                    img="RTW.gif"
+                    desc="Right to Work Check"
                   />
                   <Recipe
-                    title="Identity Check"
-                    img="https://www.ucheck.co.uk/wp-content/uploads/identity-check-icon.svg"
+                    img="iCheck.gif"
+                    desc="Digital Identification Check"
                   />
                 </section>
                 </div>

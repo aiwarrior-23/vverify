@@ -1,5 +1,5 @@
 body {
-    color: #333b40;
+    color: black;
   }
   
   .table {
@@ -14,10 +14,9 @@ body {
   .table-cell {
     flex-basis: calc(33.33% - 1px);
     box-sizing: border-box;
-    padding: 0.8em 1.2em;
     overflow: hidden;
     list-style-type: none;
-    outline: 1px solid #ddd;
+    outline: 1px solid black;
     text-align: center;
     font-weight: 300;
     margin-top: 1px;
@@ -25,12 +24,12 @@ body {
   }
   
   .table-cell:first-child {
-    outline: 1px solid #fff;
+    outline: 1px solid black;
     background: transparent;
   }
   
   .table-cell:nth-child(3) {
-    outline: 1px solid #30305b;
+    outline: 1px solid black;
   }
   
   .table-cell:nth-child(-n+3) {
@@ -42,6 +41,7 @@ body {
     font-size: 26px;
     margin-top: 0;
     margin-bottom: 3rem;
+    color: #333b40;
   }
   
   .table-cell.cell-feature {
@@ -60,7 +60,7 @@ body {
   .table-cell.plattform a.btn:hover {
     background-color: #333b40;
     border-color: #333b40;
-    color: white;
+    color: #333b40;
   }
   
 

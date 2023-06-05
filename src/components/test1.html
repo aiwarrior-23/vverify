@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+  <svg id="gmailIcon" width="100" height="100"></svg>
+
+  <script>
+    // select the svg container
+    var svg = d3.select("#gmailIcon");
+
+    // draw the main rectangle
+    svg.append("rect")
+       .attr("x", 20)
+       .attr("y", 20)
+       .attr("width", 60)
+       .attr("height", 60)
+       .attr("fill", "red");
+
+    // draw the 'M' shape
+    svg.append("path")
+       .attr("d", "M50,20 v20 l10,-10 l10,10 v-20")
+       .attr("fill", "white");
+
+    // draw the top left triangle
+    svg.append("path")
+       .attr("d", "M30,20 l20,20 v-20")
+       .attr("fill", "white");
+
+    // draw the top right triangle
+    svg.append("path")
+       .attr("d", "M70,20 l-20,20 v-20")
+       .attr("fill", "white");
+
+    // draw the bottom left triangle
+    svg.append("path")
+       .attr("d", "M30,80 l20,-20 v20")
+       .attr("fill", "white");
+
+    // draw the bottom right triangle
+    svg.append("path")
+       .attr("d", "M70,80 l-20,-20 v20")
+       .attr("fill", "white");
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+  <svg id="gmailIcon" width="100" height="100"></svg>
+
+  <script>
+    // select the svg container
+    var svg = d3.select("#gmailIcon");
+
+    // draw the main rectangle
+    svg.append("rect")
+       .attr("x", 20)
+       .attr("y", 20)
+       .attr("width", 60)
+       .attr("height", 60)
+       .attr("fill", "none")
+       .attr("stroke", "black");
+
+    // draw the 'M' shape
+    svg.append("path")
+       .attr("d", "M50,20 v20 l10,-10 l10,10 v-20")
+       .attr("fill", "none")
+       .attr("stroke", "black");
+
+    // draw the top left triangle
+    svg.append("path")
+       .attr("d", "M30,20 l20,20 v-20")
+       .attr("fill", "none")
+       .attr("stroke", "black");
+
+    // draw the top right triangle
+    svg.append("path")
+       .attr("d", "M70,20 l-20,20 v-20")
+       .attr("fill", "none")
+       .attr("stroke", "black");
+
+    // draw the bottom left triangle
+    svg.append("path")
+       .attr("d", "M30,80 l20,-20 v20")
+       .attr("fill", "none")
+       .attr("stroke", "black");
+
+    // draw the bottom right triangle
+    svg.append("path")
+       .attr("d", "M70,80 l-20,-20 v20")
+       .attr("fill", "none")
+       .attr("stroke", "black");
+  </script>
+</body>
+</html>
+

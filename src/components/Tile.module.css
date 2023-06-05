@@ -4,8 +4,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgb(83, 83, 233);
-  height: 80vh;
+  background-color: transparent;
+  height: 130vh;
+  margin-top: -10%;
 }
 
 .imagePart {
@@ -14,22 +15,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .textPart {
   flex: 1;
-  padding: 10px;
   font-weight: 400;
   font-style: normal;
+  width: 120vh;
 }
 
 .imageStyle {
   width: auto;
-  height: 74vh;
+  height: 70vh;
   object-fit: cover;
   margin-top: 0.5vh;
-  margin-right: 16.5vh;
+  margin-right: 5%;
   animation: scaleAnimation 4s ease-in-out infinite;
 }
 
@@ -48,17 +48,28 @@
 
 .heading {
   font-family: "gt-eesti-display-bold", sans-serif !important;
-  color: white;
-  font-size: 3rem;
+  color: rgb(29, 29, 223);
+  font-size: 3.5rem;
   text-align: left;
   margin-top: 2rem;
   min-width: 120% !important;
+  font-weight: 800;
+}
+
+.heading2 {
+  font-family: "gt-eesti-display-bold", sans-serif !important;
+  color: rgb(7, 7, 99);
+  font-size: 3.5rem;
+  text-align: left;
+  margin-top: 2rem;
+  min-width: 120% !important;
+  font-weight: 800;
 }
 
 .paragraph {
-  color: white;
-  font-weight: 400;
-  font-size: 1rem;
+  color: rgb(61, 61, 61);
+  font-weight: 500;
+  font-size: 1.2rem;
   text-align: left;
   margin-top: 1rem;
 }
@@ -66,15 +77,13 @@
 .outerContainer {
   display: flex;
   flex-direction: column;
-  border-right: 2px solid white;
 }
 
 .buttonSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 5px;
-  padding-top: 0;
+  align-items: flex-start;
+  justify-content: left !important;
   margin-bottom: 1rem;
   margin-top: -2%;
 }
@@ -82,29 +91,12 @@
 .buttonStyle {
   justify-content: flex-start;
   margin-bottom: 1rem;
-  width: 100%;
+  width: 300px;
   color: white !important;
-  border: 1px solid white !important;
-  margin-top: 1rem !important;
-  justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-  .infoSection {
-    flex-direction: column;
-  }
-
-  .heading {
-    font-size: 1.5rem;
-  }
-
-  .paragraph {
-    font-size: 1rem;
-  }
-
-  .buttonSection {
-    margin-left: 0;
-  }
+  font-weight: 600;
+  margin-top: 1.5rem !important;
+  justify-content: left ;
+  background-color: rgb(29, 29, 223) !important;
 }
 
 .contentPart {
@@ -112,7 +104,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 30vh;
+  padding-right: 20vh;
 }
 
 .mennnn {

@@ -21,12 +21,13 @@ import ContactUs from './components/ContactUs';
 import AboutUs from './components/AboutUs';
 import Tile from './components/Tile';
 import Dummy from './components/Dummy';
+import GradientBackground from './components/test';
 
 Modal.setAppElement('#root');
 
 function App() {
   return (
-    <div className="App" style={{background:"linear-gradient(to right, #b0cefa, white)", maxWidth:"100%"}}>
+    <div className="App" style={{background:"white", maxWidth:"100%"}}>
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -43,25 +44,9 @@ function App() {
             path="/"
             element={
               <>
-                <Header />
-                <div className="info-sections" style={{ width: "100%", justifyContent: "center", textAlign: "center" }}>
-                <Tile
-                    title="Your Background Screening Expert"
-                    img="1.png"
-                    desc="Experience trust and transparency with our bespoke verification services. From thorough background screenings to right-to-work and DBS checks, to digital ID validations, we equip you with reliable insights for informed decisions. Safeguard your environment with us, where safety and trust are paramount."
-                    clsH="heading"
-                    clsP ="paragraph"
-                  />
-                  <div style={{marginTop:"-15vh"}}>
-                  <InfoSectionWithImage
-                    title="What is V-Verify"
-                    img="https://loginid.io/_ipx/_/authenticated-payments.png"
-                    desc="The vVerify app is your secure digital ID. It’s the safe place to store your personal details, encrypted so only you can access them. When you need to prove your age, identity or other details about yourself, you can securely share just the details required without revealing everything about yourself."
-                    clsH="heading"
-                    clsP ="paragraph"
-                  />
-                  </div>
-                  </div>
+                {/* <Header /> */}
+                <GradientBackground />
+                  <ClientTicker />
                   <InfoSectionWithImageRight
                     title="How V-Verify Works"
                     img="10.png"
@@ -91,7 +76,6 @@ function App() {
                 </section>
                 </div>
                 <YotiReference />
-                <ClientTicker />
                 <VisualizationScale />
                 <Footer />
               </>

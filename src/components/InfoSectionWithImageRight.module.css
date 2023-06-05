@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(83, 83, 233);
   width: 100%;
 }
 
@@ -19,7 +18,7 @@
 
 .imageStyle {
   max-width: 100%;
-  width: 80vh;
+  width: 50vh;
   height: auto;
   transition: transform 0.3s ease-in-out;
   margin-bottom: -10%;
@@ -31,14 +30,14 @@
 
 .heading {
   font-family: "gt-eesti-display-bold", sans-serif !important;
-  color: white;
+  color: black;
   /* line-height: normal; */
   font-size: 36px;
   font-weight: 800;
 }
 
 .paragraph {
-  color: white;
+  color: black;
   font-weight: 400;
   font-size: large;
 }

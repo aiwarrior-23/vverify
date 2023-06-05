@@ -11,8 +11,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        {/* Insert logo image here */}
-        <img src="x.png" alt="Logo" className={styles.image} />
+        {/* <img src="x.png" alt="Logo" className={styles.image} /> */}
       </div>
       <nav className={styles.nav}>
         {/* Insert nav links here */}

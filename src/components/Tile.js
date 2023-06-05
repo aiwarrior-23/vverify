@@ -19,7 +19,7 @@ const Tile = ({ title, title2, img, desc, desc2 }) => {
         setText((text) => text + texts[currentTextIndex][currentIndex]);
         setCurrentIndex((currentIndex) => currentIndex + 1);
       }
-    }, 50);
+    }, 150);
 
     if (!isDeleting && currentIndex === texts[currentTextIndex].length) {
       setIsDeleting(true);
@@ -42,18 +42,16 @@ const Tile = ({ title, title2, img, desc, desc2 }) => {
       <div className={styles.contentPart}>
         <div className={styles.textPart}>
           <h2 className={styles.heading}>
-            <span>Your </span>
+            <span className={styles.heading2}>Your </span>
             <span>{text}</span>
           </h2>
-          <h2 className={styles.heading} style={{marginTop:"-5%"}}>Expert</h2>
+          <h2 className={styles.heading2} style={{marginTop:"-5%"}}>Expert</h2>
 
           <p className={styles.paragraph}>{desc}</p>
-          <h2 className={styles.heading}>{title2}</h2>
-          <p className={styles.paragraph}>{desc2}</p>
         </div>
         <div className={styles.buttonSection}>
-          <Link to="/vverifyIndividual"><Button className={styles.buttonStyle} variant="outlined">V-Verify for Individuals</Button></Link>
-          <Link to="/vverifyBusiness"><Button className={styles.buttonStyle} variant="outlined">V-Verify for Business</Button></Link>
+          <Link to="/vverifyIndividual"><Button className={styles.buttonStyle} variant="contained">V-Verify for Individuals</Button></Link>
+          <Link to="/vverifyBusiness"><Button className={styles.buttonStyle} variant="contained">V-Verify for Business</Button></Link>
         </div>
       </div>
     </div>

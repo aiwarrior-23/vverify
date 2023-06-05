@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './InfoSectionWithImageRight.module.css';
+import GmailIconAnimation from './GmailIconNotification';
 
 const InfoSectionWithImageRight = ({ title, img, desc, clsH, clsP }) => {
   const A = clsH
@@ -12,7 +13,8 @@ const InfoSectionWithImageRight = ({ title, img, desc, clsH, clsP }) => {
         <p className={styles[B]}>{desc}</p>
       </div>
       <div className={styles.imagePart}>
-        <img src={img} alt="description" className={styles.imageStyle} />
+        {/* <img src={img} alt="description" className={styles.imageStyle} /> */}
+        <GmailIconAnimation />
       </div>
     </div>
   );
